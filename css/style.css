@@ -310,6 +310,10 @@ a {
   text-decoration: none;
 }
 
+.p-top-img {
+  background-image: url(../images/mainvisual-pc.jpg);
+}
+
 /*foundation*/
 /*layout*/
 /*object*/
