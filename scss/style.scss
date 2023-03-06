@@ -10,7 +10,17 @@
 @use "layout/_sidebar";
 @use "layout/_footer";
 
-/*object*/
+/*object/project*/
 @use "object/project/_top-img";
 @use "object/project/_menu";
 @use "object/project/_access";
+
+/*object/component*/
+@use "object/component/_access-title";
+@use "object/component/_frontbox-text";
+@use "object/component/_frontbox-title";
+@use "object/component/_footer-list";
+@use "object/component/_menubtn";
+@use "object/component/_searchbox";
+@use "object/component/_searchbtn";
+@use "object/component/_sidebarbtn";

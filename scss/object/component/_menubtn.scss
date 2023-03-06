@@ -1,0 +1,24 @@
+//変数の読み込み
+@use "../../foundation/variables" as v;
+@use "../../foundation/mixin" as m;
+
+.c-menubtn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+
+    @include m.tablet {
+        top: 20px;
+        right: 20px;
+    }
+
+    @include m.pc {
+        display: none;
+    }
+
+}

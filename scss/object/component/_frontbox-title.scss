@@ -1,0 +1,16 @@
+.c-frontbox-title{
+    margin: 13px 0 0 15px;
+    font-size: 41px;
+    color: #EAEAEA;
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "";
+        top: 120%;
+        left: 0;
+        width: 30px;
+        height: 4px;
+        background-color: #fff;
+
+    }
+}

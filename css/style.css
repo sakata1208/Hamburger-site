@@ -310,11 +310,326 @@ a {
   text-decoration: none;
 }
 
+.l-header {
+  height: 215px;
+  text-align: center;
+  background-color: #FFF7EF;
+  position: relative;
+}
+.l-header h1 {
+  font-size: 40px;
+  padding-top: 43px;
+}
+.l-header .p-search {
+  margin-top: 40px;
+}
+@media screen and (min-width: 1025px) {
+  .l-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .l-header h1 {
+    padding-top: 69px;
+    margin-left: 65px;
+  }
+  .l-header .p-search {
+    margin-top: 86px;
+    margin-right: 30px;
+  }
+}
+
+.l-main {
+  width: 100vw;
+  display: flex;
+  position: relative;
+}
+@media screen and (min-width: 1025px) {
+  .l-main article {
+    width: 81vw;
+  }
+  .l-main aside {
+    width: 19vw;
+  }
+}
+
+.l-sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  padding-left: 30px;
+  padding-top: 178px;
+  transition: all 0.5s ease;
+  background-color: #F2EDE9;
+}
+.l-sidebar.active {
+  right: 0;
+}
+.l-sidebar h2 {
+  font-size: 34px;
+  display: none;
+}
+.l-sidebar h3 {
+  font-size: 24px;
+  margin-top: 30px;
+}
+.l-sidebar li {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 600px) {
+  .l-sidebar {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .l-sidebar {
+    position: relative;
+    right: 0%;
+    width: 21vw;
+    padding-top: 86px;
+  }
+  .l-sidebar h2 {
+    display: block;
+  }
+}
+
+.l-footer {
+  width: 100%;
+  height: 150px;
+  color: #FFFFFF;
+  background-color: #9D8670;
+  text-align: center;
+}
+
 .p-top-img {
+  height: 285px;
   background-image: url(../images/mainvisual-pc.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.p-top-img__title {
+  font-size: 41px;
+  margin-left: 25px;
+  padding-top: 120px;
+  color: #fff;
+}
+
+.p-menu {
+  margin: 40px 20px 40px 20px;
+}
+.p-menu-box1, .p-menu-box2 {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: calc((100vw - 40px) * 1.91);
+}
+.p-menu-box1 {
+  background-image: url(../images/takeout.jpg);
+}
+.p-menu-box2 {
+  background-image: url(../images/eatin.jpg);
+}
+@media screen and (min-width: 600px) {
+  .p-menu {
+    margin: 40px;
+  }
+  .p-menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .p-menu-box1, .p-menu-box2 {
+    width: calc(100vw - 120px);
+    height: calc((100vw - 120px) * 0.95);
+  }
+  .p-menu-box1 {
+    margin-right: 40px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .p-menu {
+    margin-top: 120px 5.8vw 120px 5.8vw;
+  }
+  .p-menu-box1, .p-menu-box2 {
+    width: calc(69.4vw - 80px);
+    height: calc((69.4vw - 80px) * 0.95);
+  }
+  .p-menu-box1 {
+    margin-right: 80px;
+  }
+}
+
+.p-access {
+  width: 100%;
+  height: 691px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #000000;
+  opacity: 0.29;
+}
+.p-access p {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.c-access-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  margin-top: 40px;
+}
+.c-access-title::before {
+  position: absolute;
+  content: "";
+  top: 120%;
+  left: 0;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+}
+
+.c-frontbox-text {
+  position: absolute;
+  bottom: 16px;
+}
+.c-frontbox-text__1 {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 16px;
+  margin: 16px 16px 0 16px;
+}
+.c-frontbox-text__1 dt {
+  font-size: 22px;
+  font-weight: 700;
+}
+.c-frontbox-text__1 dd {
+  font-size: 16px;
+}
+
+.c-frontbox-title {
+  margin: 13px 0 0 15px;
+  font-size: 41px;
+  color: #EAEAEA;
+  position: relative;
+}
+.c-frontbox-title::before {
+  position: absolute;
+  content: "";
+  top: 120%;
+  left: 0;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+}
+
+.c-footer-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
+.c-footer-list li {
+  margin-right: 20px;
+  font-size: 20px;
+}
+.c-footer-list p {
+  font-size: 14px;
+}
+.c-footer-list__left {
+  position: relative;
+}
+.c-footer-list__left::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -10px;
+  width: 1px;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+.c-menubtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+}
+@media screen and (min-width: 600px) {
+  .c-menubtn {
+    top: 20px;
+    right: 20px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .c-menubtn {
+    display: none;
+  }
+}
+
+.c-searchbox {
+  width: 216px;
+  height: 46px;
+  background: #FFFFFF;
+  border: 1px solid #707070;
+  border-radius: 10px 8px 10px 10px;
+}
+
+.c-searchbtn {
+  font-size: 16px;
+  width: 90px;
+  height: 46px;
+  background: linear-gradient(90deg, #F2EDE9 0%, #DED8D3 100%);
+  border: 1px solid #707070;
+  border-radius: 10px;
+}
+
+.c-sidebarbtn {
+  position: fixed;
+  top: 10px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: transparent;
+  display: none;
+}
+.c-sidebarbtn::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  transform: rotate(45deg);
+  background-color: #707070;
+}
+.c-sidebarbtn::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  transform: rotate(-45deg);
+  background-color: #707070;
+}
+.c-sidebarbtn.active {
+  display: block;
 }
 
 /*foundation*/
 /*layout*/
-/*object*/
+/*object/project*/
+/*object/component*/
 /*# sourceMappingURL=style.css.map */

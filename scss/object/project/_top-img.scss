@@ -1,3 +1,15 @@
+//変数の読み込み
+
+
 .p-top-img{
+    height: 285px;
     background-image: url(../images/mainvisual-pc.jpg);
+    background-size: cover;
+    background-position: center;
+    &__title{
+        font-size: 41px;
+        margin-left: 25px;
+        padding-top: 120px;
+        color:#fff;
+    }
 }
