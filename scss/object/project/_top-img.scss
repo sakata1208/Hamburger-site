@@ -1,15 +1,33 @@
 //変数の読み込み
+//変数の読み込み
+@use "../../foundation/variables" as v;
+@use "../../foundation/mixin" as m;
 
-
-.p-top-img{
+.p-top-img__front,
+.p-top-img__archive {
     height: 285px;
-    background-image: url(../images/mainvisual-pc.jpg);
     background-size: cover;
     background-position: center;
-    &__title{
-        font-size: 41px;
+}
+
+.p-top-img__front {
+    background-image: url(../../../images/mainvisual-pc.jpg);
+}
+
+.p-top-img__archive {
+    background-image: url(../../../images/page-title_arcive.jpg);
+    display: flex;
+    flex-direction: column;
+    p{
+        color: v.$color-white;
         margin-left: 25px;
-        padding-top: 120px;
-        color:#fff;
+        font-size: 16px;
     }
+}
+
+.p-top-img__title {
+    font-size: 41px;
+    margin-left: 25px;
+    padding-top: 120px;
+    color: v.$color-white;
 }

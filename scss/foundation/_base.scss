@@ -1,10 +1,11 @@
 //base
 html {
-    font-size: 62.5%; /*ベースを16px→10pxにする*/
+    font-size: 62.5%;
+    /*ベースを16px→10pxにする*/
 }
 
 body {
-    min-width:320px;
+    min-width: 320px;
     width: 100%;
     margin: 0;
     font-size: 1.6rem;
@@ -17,13 +18,37 @@ img {
     vertical-align: middle;
 }
 
-h1, h2, h3, h4, h5, h6, p, figure {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
     margin: 0;
     padding: 0;
     font-size: 100%;
 }
 
-ul, ol {
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 20pxs;
+}
+
+ul,
+ol {
     list-style-type: none;
 }
 

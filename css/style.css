@@ -278,7 +278,8 @@ progress {
 }
 
 html {
-  font-size: 62.5%; /*ベースを16px→10pxにする*/
+  font-size: 62.5%;
+  /*ベースを16px→10pxにする*/
 }
 
 body {
@@ -295,13 +296,37 @@ img {
   vertical-align: middle;
 }
 
-h1, h2, h3, h4, h5, h6, p, figure {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
   margin: 0;
   padding: 0;
   font-size: 100%;
 }
 
-ul, ol {
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 20pxs;
+}
+
+ul,
+ol {
   list-style-type: none;
 }
 
@@ -400,66 +425,8 @@ a {
 .l-footer {
   width: 100%;
   height: 150px;
-  color: #FFFFFF;
   background-color: #9D8670;
   text-align: center;
-}
-
-.p-top-img {
-  height: 285px;
-  background-image: url(../images/mainvisual-pc.jpg);
-  background-size: cover;
-  background-position: center;
-}
-.p-top-img__title {
-  font-size: 41px;
-  margin-left: 25px;
-  padding-top: 120px;
-  color: #fff;
-}
-
-.p-menu {
-  margin: 40px 20px 40px 20px;
-}
-.p-menu-box1, .p-menu-box2 {
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  height: calc((100vw - 40px) * 1.91);
-}
-.p-menu-box1 {
-  background-image: url(../images/takeout.jpg);
-}
-.p-menu-box2 {
-  background-image: url(../images/eatin.jpg);
-}
-@media screen and (min-width: 600px) {
-  .p-menu {
-    margin: 40px;
-  }
-  .p-menu ul {
-    display: flex;
-    justify-content: space-around;
-  }
-  .p-menu-box1, .p-menu-box2 {
-    width: calc(100vw - 120px);
-    height: calc((100vw - 120px) * 0.95);
-  }
-  .p-menu-box1 {
-    margin-right: 40px;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .p-menu {
-    margin-top: 120px 5.8vw 120px 5.8vw;
-  }
-  .p-menu-box1, .p-menu-box2 {
-    width: calc(69.4vw - 80px);
-    height: calc((69.4vw - 80px) * 0.95);
-  }
-  .p-menu-box1 {
-    margin-right: 80px;
-  }
 }
 
 .p-access {
@@ -475,15 +442,14 @@ a {
   font-size: 14px;
   margin-top: 30px;
 }
-
-.c-access-title {
+.p-access__title {
   font-size: 30px;
   font-weight: 700;
   color: #fff;
   position: relative;
   margin-top: 40px;
 }
-.c-access-title::before {
+.p-access__title::before {
   position: absolute;
   content: "";
   top: 120%;
@@ -493,30 +459,28 @@ a {
   background-color: #fff;
 }
 
-.c-frontbox-text {
-  position: absolute;
-  bottom: 16px;
+.p-brunchmenu {
+  margin: 40px 20px 40px 20px;
 }
-.c-frontbox-text__1 {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 16px;
-  margin: 16px 16px 0 16px;
+.p-brunchmenu__box1, .p-brunchmenu__box2 {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: calc((100vw - 40px) * 1.91);
 }
-.c-frontbox-text__1 dt {
-  font-size: 22px;
-  font-weight: 700;
+.p-brunchmenu__box1 {
+  background-image: url(../images/takeout.jpg);
 }
-.c-frontbox-text__1 dd {
-  font-size: 16px;
+.p-brunchmenu__box2 {
+  background-image: url(../images/eatin.jpg);
 }
-
-.c-frontbox-title {
+.p-brunchmenu__box-title {
   margin: 13px 0 0 15px;
   font-size: 41px;
   color: #EAEAEA;
   position: relative;
 }
-.c-frontbox-title::before {
+.p-brunchmenu__box-title::before {
   position: absolute;
   content: "";
   top: 120%;
@@ -525,24 +489,132 @@ a {
   height: 4px;
   background-color: #fff;
 }
+.p-brunchmenu__box-text {
+  position: absolute;
+  bottom: 16px;
+}
+.p-brunchmenu__box-text-content {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 16px;
+  margin: 16px 16px 0 16px;
+}
+.p-brunchmenu__box-text-content dt {
+  font-size: 22px;
+  font-weight: 700;
+}
+.p-brunchmenu__box-text-content dd {
+  font-size: 16px;
+}
+@media screen and (min-width: 600px) {
+  .p-brunchmenu {
+    margin: 40px;
+  }
+  .p-brunchmenu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .p-brunchmenu__box1, .p-brunchmenu__box2 {
+    width: calc(100vw - 120px);
+    height: calc((100vw - 120px) * 0.95);
+  }
+  .p-brunchmenu__box1 {
+    margin-right: 40px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .p-brunchmenu {
+    margin-top: 120px 5.8vw 120px 5.8vw;
+  }
+  .p-brunchmenu__box1, .p-brunchmenu__box2 {
+    width: calc(69.4vw - 80px);
+    height: calc((69.4vw - 80px) * 0.95);
+  }
+  .p-brunchmenu__box1 {
+    margin-right: 80px;
+  }
+}
 
-.c-footer-list {
+.p-card {
+  width: calc(100vw - 40px);
+  margin: auto;
+}
+.p-card img {
+  width: 100%;
+  height: auto;
+}
+.p-card li {
+  margin-bottom: 20px;
+}
+.p-card__text {
+  background-color: #3C2B1C;
+  padding: 32px 16px 32px 16px;
+}
+.p-card__text h4 {
+  margin-bottom: 20px;
+}
+.p-card__text dl {
+  margin-bottom: 40px;
+}
+.p-card__text dt {
+  font-weight: 700;
+}
+.p-card__text .c-cardbtn {
+  text-align: center;
+  font-weight: 700;
+  display: block;
+  margin: auto;
+}
+@media screen and (min-width: 600px) {
+  .p-card {
+    width: calc(100vw - 80px);
+  }
+  .p-card li {
+    display: flex;
+  }
+  .p-card img {
+    width: calc(100vw - 80px)/2;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .p-card__text {
+    padding: 30px 60px 40px 30px;
+  }
+  .p-card dl {
+    margin-bottom: 45px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .p-card {
+    width: calc(81vw - 200px);
+  }
+  .p-card img {
+    width: calc((81vw - 200px) / 2);
+  }
+  .p-card__text {
+    padding: 30px 60px 40px 30px;
+  }
+  .p-card dl {
+    margin-bottom: 45px;
+  }
+}
+
+.p-footer-list {
   display: flex;
   justify-content: center;
   padding-top: 30px;
   padding-bottom: 45px;
 }
-.c-footer-list li {
+.p-footer-list li {
   margin-right: 20px;
   font-size: 20px;
 }
-.c-footer-list p {
+.p-footer-list p {
   font-size: 14px;
 }
-.c-footer-list__left {
+.p-footer-list__left {
   position: relative;
 }
-.c-footer-list__left::after {
+.p-footer-list__left::after {
   position: absolute;
   content: "";
   top: 0;
@@ -550,6 +622,49 @@ a {
   width: 1px;
   height: 100%;
   background-color: #FFFFFF;
+}
+
+.p-pageabout {
+  margin: 30px 20px 30px 20px;
+}
+@media screen and (min-width: 600px) {
+  .p-pageabout {
+    margin: 30px 40px 30px 40px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .p-pageabout {
+    margin: 30px 100px 30px 100px;
+  }
+}
+
+.p-top-img__front,
+.p-top-img__archive {
+  height: 285px;
+  background-size: cover;
+  background-position: center;
+}
+
+.p-top-img__front {
+  background-image: url(../../../images/mainvisual-pc.jpg);
+}
+
+.p-top-img__archive {
+  background-image: url(../../../images/page-title_arcive.jpg);
+  display: flex;
+  flex-direction: column;
+}
+.p-top-img__archive p {
+  color: #FFFFFF;
+  margin-left: 25px;
+  font-size: 16px;
+}
+
+.p-top-img__title {
+  font-size: 41px;
+  margin-left: 25px;
+  padding-top: 120px;
+  color: #FFFFFF;
 }
 
 .c-menubtn {
@@ -572,14 +687,6 @@ a {
   .c-menubtn {
     display: none;
   }
-}
-
-.c-searchbox {
-  width: 216px;
-  height: 46px;
-  background: #FFFFFF;
-  border: 1px solid #707070;
-  border-radius: 10px 8px 10px 10px;
 }
 
 .c-searchbtn {
@@ -628,8 +735,47 @@ a {
   display: block;
 }
 
+.c-cardbtn {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  width: 163.16px;
+  height: 42.47px;
+}
+
+.c-searchbox {
+  width: 216px;
+  height: 46px;
+  background: #FFFFFF;
+  border: 1px solid #707070;
+  border-radius: 10px 8px 10px 10px;
+}
+
+.c-fontfamily--R {
+  font-family: "Roboto", "sans-serif";
+  font-weight: 700;
+}
+.c-fontfamily--M-regular {
+  font-family: "M PLUS 1p", "sans-serif";
+  font-weight: 400;
+}
+.c-fontfamily--M-bold {
+  font-family: "M PLUS 1p", "sans-serif";
+  font-weight: 700;
+}
+
+.u-fontcolor--white {
+  color: #FFFFFF;
+}
+.u-fontcolor--brown {
+  color: #707070;
+}
+.u-fontcolor--darkbrown {
+  color: #3C2A10;
+}
+
 /*foundation*/
 /*layout*/
 /*object/project*/
 /*object/component*/
+/*object/utility*/
 /*# sourceMappingURL=style.css.map */
