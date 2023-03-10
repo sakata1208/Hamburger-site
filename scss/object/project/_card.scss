@@ -27,13 +27,8 @@
             margin-bottom: 40px;
         }
 
-        dt {
-            font-weight: 700;
-        }
-
         .c-cardbtn {
             text-align: center;
-            font-weight: 700;
             display: block;
             margin: auto;
         }
@@ -65,14 +60,6 @@
 
         img {
             width: calc((81vw - 200px)/ 2);
-        }
-
-        &__text {
-            padding: 30px 60px 40px 30px;
-        }
-
-        dl {
-            margin-bottom: 45px;
         }
     }
 }

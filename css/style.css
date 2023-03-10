@@ -412,9 +412,12 @@ a {
   padding-top: 178px;
   transition: all 0.5s ease;
   background-color: #F2EDE9;
+  z-index: 4;
 }
 .l-sidebar.active {
   right: 0;
+  overflow: scroll;
+  height: 100vh;
 }
 .l-sidebar h2 {
   font-size: 34px;
@@ -454,24 +457,36 @@ a {
 }
 
 .p-access {
+  position: relative;
   width: 100%;
   height: 691px;
   padding-left: 40px;
   padding-right: 40px;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../../images/map.png);
+  opacity: 0.8;
+}
+.p-access::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: #000000;
-  opacity: 0.29;
+  opacity: 0.6;
+  z-index: 1;
 }
 .p-access p {
-  color: #fff;
-  font-size: 14px;
-  margin-top: 30px;
+  padding-top: 30px;
+  position: relative;
+  z-index: 2;
 }
 .p-access__title {
-  font-size: 30px;
-  font-weight: 700;
-  color: #fff;
   position: relative;
-  margin-top: 40px;
+  padding-top: 40px;
+  z-index: 2;
 }
 .p-access__title::before {
   position: absolute;
@@ -480,7 +495,21 @@ a {
   left: 0;
   width: 30px;
   height: 4px;
-  background-color: #fff;
+  background-color: #FFFFFF;
+}
+@media screen and (min-width: 600px) {
+  .p-access {
+    height: 650px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .p-access::before {
+    width: 60%;
+  }
+  .p-access p {
+    width: 60%;
+    padding-top: 100px;
+  }
 }
 
 .p-brunchmenu {
@@ -524,7 +553,6 @@ a {
 }
 .p-brunchmenu__box-text-content dt {
   font-size: 22px;
-  font-weight: 700;
 }
 .p-brunchmenu__box-text-content dd {
   font-size: 16px;
@@ -579,12 +607,8 @@ a {
 .p-card__text dl {
   margin-bottom: 40px;
 }
-.p-card__text dt {
-  font-weight: 700;
-}
 .p-card__text .c-cardbtn {
   text-align: center;
-  font-weight: 700;
   display: block;
   margin: auto;
 }
@@ -613,12 +637,6 @@ a {
   }
   .p-card img {
     width: calc((81vw - 200px) / 2);
-  }
-  .p-card__text {
-    padding: 30px 60px 40px 30px;
-  }
-  .p-card dl {
-    margin-bottom: 45px;
   }
 }
 
@@ -664,8 +682,8 @@ a {
 
 .p-top-img__front,
 .p-top-img__archive {
+  position: relative;
   height: 285px;
-  vertical-align: middle;
   background-size: cover;
   background-position: center;
 }
@@ -673,12 +691,14 @@ a {
 .p-top-img__front {
   background-image: url(../../../images/mainvisual-pc.jpg);
 }
+@media screen and (min-width: 1025px) {
+  .p-top-img__front h2 {
+    font-size: 40px;
+  }
+}
 
 .p-top-img__archive {
   background-image: url(../../../images/page-title_arcive.jpg);
-  position: relative;
-  display: flex;
-  flex-direction: column;
 }
 .p-top-img__archive::before {
   position: absolute;
@@ -691,31 +711,20 @@ a {
   opacity: 0.4;
   z-index: 1;
 }
-.p-top-img__archive p {
-  color: #FFFFFF;
-  margin-left: 25px;
-  font-size: 16px;
-  z-index: 2;
-}
-@media screen and (min-width: 600px) {
-  .p-top-img__archive {
-    flex-direction: row;
-  }
-  .p-top-img__archive p {
-    padding-top: 125px;
-  }
-}
 
-.p-top-img__title {
-  font-size: 41px;
+.p-top-img__text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
   margin-left: 25px;
-  padding-top: 83px;
-  color: #FFFFFF;
   z-index: 2;
 }
 @media screen and (min-width: 600px) {
-  .p-top-img__title {
-    font-size: 60px;
+  .p-top-img__text {
+    flex-direction: row;
   }
 }
 
@@ -800,6 +809,8 @@ a {
   background: #FFFFFF;
   border: 1px solid #707070;
   border-radius: 10px 8px 10px 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .c-fontfamily--R {
